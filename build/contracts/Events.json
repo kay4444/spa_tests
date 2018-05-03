@@ -1,0 +1,410 @@
+{
+  "contractName": "Events",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_code",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "Error",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_code",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_assetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "Success",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820e0ab4970e2a56547f7d87f90e21cdb0edb8b9d6b28832ee790d9ecd94e79748b0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820e0ab4970e2a56547f7d87f90e21cdb0edb8b9d6b28832ee790d9ecd94e79748b0029",
+  "sourceMap": "215:124:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;215:124:3;;;;;;;",
+  "deployedSourceMap": "215:124:3:-;;;;;",
+  "source": "pragma solidity ^0.4.19;\n\n// This contract will handle all events that needs to be emitted. \n// Some of them includes: success events, error events. \n// Successfully added an asset.\n// Errored out adding an asset.\n\ncontract Events {\n    \n    event Error(uint _code, string _message);\n    event Success(uint _code, address _assetAddress);\n}",
+  "sourcePath": "/Users/kay4444/Documents/splyt_testing/contracts/Events.sol",
+  "ast": {
+    "absolutePath": "/Users/kay4444/Documents/splyt_testing/contracts/Events.sol",
+    "exportedSymbols": {
+      "Events": [
+        848
+      ]
+    },
+    "id": 849,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 835,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 848,
+        "linearizedBaseContracts": [
+          848
+        ],
+        "name": "Events",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 841,
+            "name": "Error",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 837,
+                  "indexed": false,
+                  "name": "_code",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "254:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 836,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 839,
+                  "indexed": false,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "266:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 838,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:29:3"
+            },
+            "src": "242:41:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 847,
+            "name": "Success",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 846,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 843,
+                  "indexed": false,
+                  "name": "_code",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 847,
+                  "src": "302:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 842,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 845,
+                  "indexed": false,
+                  "name": "_assetAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 847,
+                  "src": "314:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 844,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "301:35:3"
+            },
+            "src": "288:49:3"
+          }
+        ],
+        "scope": 849,
+        "src": "215:124:3"
+      }
+    ],
+    "src": "0:339:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/kay4444/Documents/splyt_testing/contracts/Events.sol",
+    "exportedSymbols": {
+      "Events": [
+        848
+      ]
+    },
+    "id": 849,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 835,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".19"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 848,
+        "linearizedBaseContracts": [
+          848
+        ],
+        "name": "Events",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 841,
+            "name": "Error",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 837,
+                  "indexed": false,
+                  "name": "_code",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "254:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 836,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "254:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 839,
+                  "indexed": false,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "266:15:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 838,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "253:29:3"
+            },
+            "src": "242:41:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 847,
+            "name": "Success",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 846,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 843,
+                  "indexed": false,
+                  "name": "_code",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 847,
+                  "src": "302:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 842,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 845,
+                  "indexed": false,
+                  "name": "_assetAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 847,
+                  "src": "314:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 844,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "314:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "301:35:3"
+            },
+            "src": "288:49:3"
+          }
+        ],
+        "scope": 849,
+        "src": "215:124:3"
+      }
+    ],
+    "src": "0:339:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-03T16:27:10.464Z"
+}

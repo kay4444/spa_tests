@@ -1,0 +1,19 @@
+satToken init: 
+"SAT", "splyt access tokens", 4
+
+splytTracker init: 
+4, "splyt", "0x19a22419c418cf0884424760e8577f3429be5e0a"
+
+create asset: 
+"0x5a", 0, "0xca35b7d915458ef540ade6068dfe2f44e8fa733c", "Coffee for sale", 350, 1524696424, "0xf187b33d332caa93582ef77699140a560cb5c2de", 4
+
+"0x5a"
+
+contribute: 
+"0x30e03f3a791a981a6b471b9d6e2a332f9805e021", "0x14723a09acff6d2a60dcdf7aa4aff308fddc160c", 350
+
+"0x14723a09acff6d2a60dcdf7aa4aff308fddc160c"
+
+"0x504a37ea0f3751898eb908b54574afce754456c0", "0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db", 50
+
+MigrateSat.sol : 0x4353fe86934453d86a72da60c7aab6c4fc5d8104
