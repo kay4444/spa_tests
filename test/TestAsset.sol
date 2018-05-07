@@ -16,13 +16,13 @@ contract TestAsset {
     }
     
     // Check that user has made some contributions
-    //function testGetMyContribution() public {
-        //Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 111,
-        //0x627306090abab3a6e1400e9345bc60c78a8bef57, "MyTitle", 200, 1556712588,
-        //0xf17f52151ebef6c7334fad080c5704d77216b732, 111);
-        //asset.contribute(0xf17f52151ebef6c7334fad080c5704d77216b732, 0x627306090abab3a6e1400e9345bc60c78a8bef57, 3);
-        //Assert.equal(asset.getMyContributions(0x627306090abab3a6e1400e9345bc60c78a8bef57), 3, "Contribution is not zero!");
-    //} 
+    function testGetMyContribution() public {
+        Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 111,
+        0x627306090abab3a6e1400e9345bc60c78a8bef57, "MyTitle", 200, 1556712588,
+        0xf17f52151ebef6c7334fad080c5704d77216b732, 111);
+        asset.contribute(0xf17f52151ebef6c7334fad080c5704d77216b732, 0x627306090abab3a6e1400e9345bc60c78a8bef57, 3);
+        Assert.equal(asset.getMyContributions(0x627306090abab3a6e1400e9345bc60c78a8bef57), 3, "Contribution is not zero!");
+    }
     
     // Contribute in asset
       //function testContribute() public {
@@ -58,7 +58,7 @@ contract TestAsset {
         Assert.isFalse(asset.isOpenForContribution(777), "Asset is open for contribution");
     }
     
-    // Check that asset has been funded yet
+    // Check that asset has been funded
     //function testIsFunded() public {
     //    Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 0,
      //   0x627306090abab3a6e1400e9345bc60c78a8bef57, "MyTitle", 200, 1556712588,
