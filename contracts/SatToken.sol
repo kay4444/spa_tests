@@ -7,13 +7,18 @@ contract SatToken is ERC20 {
     uint version;
     string description;
     address public trackerAddr;
+
     
     constructor (string _name, string _description, uint _version) public {
         name = _name;
         version = _version;
         description = _description;
     }
-    
+
+//    function getAddress() public constant returns (address) {
+//        address myAddress = this.address;
+//        return myAddress;
+//    }
     //TODO: Put splyt related $$ transfer logic here
 }
 

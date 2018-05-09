@@ -20,6 +20,7 @@ contract SplytTracker {
     // Success events gets triggered when a listing is created or a listing is fully funded
     // _code: 1 = listing created, 2 = contributions came in
     // _assetAddress: the asset address for which the code happened
+
     event Success(uint _code, address _assetAddress);
     event Error(uint _code, string _message);
 

@@ -4,11 +4,33 @@ import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/Asset.sol";
 import "../contracts/ERC20.sol";
+import "../contracts/SatToken.sol";
+import "../contracts/SplytTracker.sol";
 
+//var SatToc = artifacts.require("SatToken");
+//var SplytTrack = artifacts.require("SplytTracker");
+
+//contract('SatToc', 'SplytTrack', function(accounts) {
 contract TestAsset {
+
+    address sattoken;
+    constructor() public {
+        sattoken = new SatToken("Testing", "ContrTest", 2);
+    }
+
     // uint contributing = 100;
     // uint cost = 200;
-    
+
+//    var Storage = artifacts.require("../contracts/SatToken.sol");
+//        module.exports = function(deployer) {
+//        deployer.deploy(Storage);
+//    };
+//
+//    var Storage1 = artifacts.require("../contracts/SplytTracker.sol");
+//    module.exports = function(deployer) {
+//    deployer.deploy(Storage);
+//    };
+
     // Check that user has not made any contribution
     function testMyContributionIsZero() public {
         Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 111, 0x31F2ae92057a7123eF0e490A998e90d4C492b1d3, "MyTitle", 200, 1556712588, 0xD770D65e08239258c6f5a367Ef53B236840e6F80, 111);
@@ -17,9 +39,26 @@ contract TestAsset {
     
     // Check that user has made some contributions
     function testGetMyContribution() public {
-        Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 111,
-        0x627306090abab3a6e1400e9345bc60c78a8bef57, "MyTitle", 200, 1556712588,
-        0xf17f52151ebef6c7334fad080c5704d77216b732, 111);
+//        SatToc.deployed("Testing", "ContrTest", 2).then( function(instance) {
+//            SatToken.initUser(0x627306090abab3a6e1400e9345bc60c78a8bef57);
+//            SplytTrack.deployed(2, "ContrTest", instance.address).then( function(instance2) {
+//                Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 111,
+//                0x627306090abab3a6e1400e9345bc60c78a8bef57, "MyTitle", 200, 1556712588,
+//                instance2.address, 111);
+//                asset.contribute(0xf17f52151ebef6c7334fad080c5704d77216b732, 0x627306090abab3a6e1400e9345bc60c78a8bef57, 3);
+//                Assert.equal(asset.getMyContributions(0x627306090abab3a6e1400e9345bc60c78a8bef57), 3, "Contribution is not zero!");
+//            });
+//        });
+
+        SatToken sattokenInstance = SatToken(sattoken);
+
+//        address sattoken = new SatToken("Testing", "ContrTest", 2);
+//        SatToken sattokenInstance = SatToken(sattoken);
+
+        sattokenInstance.initUser(0x627306090abab3a6e1400e9345bc60c78a8bef57);
+        address splyttracker = new SplytTracker(2, "ContrTest", sattoken);
+        Asset asset = new Asset(0x31f2ae92057a7123ef0e490a, 111, 0x627306090abab3a6e1400e9345bc60c78a8bef57, "MyTitle",
+            200, 1556712588, splyttracker, 111);
         asset.contribute(0xf17f52151ebef6c7334fad080c5704d77216b732, 0x627306090abab3a6e1400e9345bc60c78a8bef57, 3);
         Assert.equal(asset.getMyContributions(0x627306090abab3a6e1400e9345bc60c78a8bef57), 3, "Contribution is not zero!");
     }
